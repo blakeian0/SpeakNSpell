@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speak 'n' Spell</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body onload="update_information(); switcher();">
+
+<div id="game" class="hidden">
+    <button id="game_pause" onclick="toggle_modal()">||</button>
+
+    <button id="game_help" onclick="toggle_help()">?</button>
+    <img class="hidden" id="help" src="onlinehelp.png" alt="Online Help Sheet">
+    <div class="hidden" id="help_hitbox" onclick="toggle_help()"></div>
+
+    <div id="game_outer-container">
+
+        <div id="game_modal" class="hidden">
+            <div id="game_modal-content">
+                <p class="title-text"><span>Paused</span></p>
+                <button id="game_pause_return" onclick="toggle_modal();">X</button>
+                <button id="game_pause_level-select" onclick="switcher('level')">Level Select</button>
+
+            </div>
+
+        </div>
+
+        <div id="game_inner-container">
+
+            <div id="game_titles">
+                <p class='title-text' id="game_titles_level"></p>
+
+                <div id="game_titles_word-stats">
+                    <p class="title-text" id="game_titles_word-index"></p>
+                    <p class="title-text" onclick="toggle_debug();">/</p>
+                    <p class="title-text" id="game_titles_word-count"></p>
+                </div>
+            </div>
+
+            <div id="game_input">
+                <label for="game_input_response"></label>
+                <input type="text" id="game_input_response" autocomplete="off" spellcheck="false">
+            </div>
+
+            <div id="game_buttons">
+                <button class="button" onclick="speak()">Replay</button>
+                <button class="button" onclick="submit()">Submit</button>
+            </div>
+
+            <div id="game_feedback">
+                <p class="title-text" id="game_feedback_response"><span></span></p>
+            </div>
+
+
+        </div>
+
+    </div>
+    <p class="hidden" id="game_debug"></p>
+
+</div>
+
+<div id="start">
+    <div id="start_container">
+        <p id="start_title">Speak'n'Spell</p>
+        <button id="start_button" onclick="switcher('level')">Start!</button>
+    </div>
+</div>
+
+<div id="level" class="hidden">
+    <div id="level_container">
+        <p id="level_title">Level Select</p>
+        <button class="level_button" onclick="loadGame('1')">Level 1</button>
+        <button class="level_button" onclick="loadGame('2')">Level 2</button>
+        <button class="level_button" onclick="loadGame('3')">Level 3</button>
+    </div>
+</div>
+
+<div id="score" class="hidden">
+    <div id="score_container">
+        <p id="score_title">Level X</p>
+
+        <div id="score_titles">
+            <p class="title-text">Score: </p>
+
+            <div id="score_stats">
+                <p class="title-text" id="score_score"></p>
+                <p class="title-text">/</p>
+                <p class="title-text" id="score_word-count"></p>
+            </div>
+        </div>
+
+        <button class="level_button" onclick="switcher('level')">Level Select</button>
+    </div>
+
+</div>
+
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=bDlUci1e"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

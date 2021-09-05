@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RobotoBold:wght@700&display=swap');
+
+
+/* Document */
+html {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Switcher */
+#start {
+
+}
+
+#level {
+
+}
+
+#game {
+
+}
+
+
+/* start */
+#start_title {
+    font-size: 100px;
+    width: 600px;
+    text-align: center;
+    border: 3px solid white;
+    margin: auto;
+    font-family: 'RobotoBold', sans-serif;
+}
+
+#start_button {
+    width: 60%;
+    height: 100px;
+    font-family: 'RobotoBold', sans-serif;
+    font-size: 50px;
+    margin-left: 20%;
+}
+
+#start_container {
+    margin: 200px auto auto auto;
+    border: 3px solid white;
+    width: 600px;
+    padding: 50px;
+
+}
+
+
+/* level */
+.level_button {
+    width: 60%;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+#level_title {
+    font-size: 100px;
+    width: 600px;
+    text-align: center;
+    border: 3px solid white;
+    margin: auto;
+    font-family: 'RobotoBold', sans-serif;
+}
+
+#level_container {
+    margin: 100px auto auto auto;
+    border: 3px solid white;
+    width: 600px;
+    padding: 50px;
+
+}
+
+/* score */
+#score_container {
+    margin: 100px auto auto auto;
+    border: 3px solid white;
+    width: 600px;
+    padding: 50px;
+}
+
+#score_title {
+    font-size: 100px;
+    width: 600px;
+    text-align: center;
+    border: 3px solid white;
+    margin: auto;
+    font-family: 'RobotoBold', sans-serif;
+}
+
+#score_titles {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+/* game */
+span {
+    font-family: 'RobotoBold', sans-serif;
+}
+
+.title-text {
+    margin: 0;
+    display: inline-block;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    width: 48%;
+    height: 100%;
+    font-size: 40px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+#game_pause {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'RobotoBold', sans-serif;
+    font-size: 70px;
+    width: 100px;
+    height: 100px;
+}
+
+#game_help {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-family: 'RobotoBold', sans-serif;
+    font-size: 70px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+#help {
+    z-index: 100;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+}
+
+#help_hitbox {
+    z-index: 101;
+    position: fixed;
+    width: 5000px;
+    height: 5000px;
+}
+
+#game_modal {
+    z-index: 1;
+    background-color: #d2d2d2;
+    display: block;
+    position: absolute;
+
+    margin: 60px auto auto auto;
+    left: 30%;
+
+    width: 40%;
+    height: 200px;
+    border: 3px solid black;
+}
+
+#game_modal-content {
+    padding: 10px;
+}
+
+#game_pause_level-select {
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#game_pause_return {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 10px;
+    position: absolute;
+}
+
+#game_titles {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+
+}
+
+#game_titles_level {
+    font-family: 'RobotoBold', sans-serif;
+ }
+
+#game_word-stats {
+
+}
+
+#game_buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: 10px;
+}
+
+#game_input_response {
+    font-size: 60px;
+    width: 95%;
+    font-family: 'RobotoBold', sans-serif;
+    border: 0;
+    padding: 0;
+    margin: auto auto auto 5px;
+    outline: none;
+}
+
+#game_input {
+    border: 1px solid #ff0c45;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+
+}
+
+#game_feedback {
+    margin: 10px auto auto;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#game_inner-container {
+
+}
+
+#game_outer-container {
+    margin: 200px auto auto auto;
+    width: 700px;
+    height: 400px;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+#game_debug {
+    margin: auto auto 100px auto;
+}
